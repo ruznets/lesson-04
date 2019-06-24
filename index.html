@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pristavka Dmitriy</title>
+</head>
+
+<body>
+    <div>
+        <h1>Homework 4</h1>
+        <h2>Required</h2>
+        <p> Создайте объект, свойства которого описывают содержимое дамской сумочки. Создайте метод объекта, позволяющий
+            удалить что-то из сумочки. Создайте метод объекта, позволяющий положить что-то в сумочку</p>
+        <div class="code">
+            <pre>
+var womanBag = {
+    color: 'white',
+    items: [],
+    addItem: function(Item) {
+        typeof Item == typeof 'string' & this.items.length <= 5 ? this.items.push(Item) : console.log('Это не для этой сумки !')
+    },
+
+    showItems: function() {
+        this.items.length == 0 ? console.log('А тут ничего нет !') : console.log(this.items)
+    },
+    
+    getItems: function() {
+        this.items.length > 0 ? console.log(this.items.pop()) : console.log('В сумке пусто')
+    }
+}
+womanBag.showItems()
+womanBag.addItem('apple')
+womanBag.showItems()
+womanBag.getItems('apple')
+            </pre>
+        </div>
+    </div>
+    <div>
+        <h2>Additionaly 3</h2>
+        <p> Объявите конструктор, который создает экземпляры с унаследованным методом addProperty. Метод addProperty должен принимать два аргумента: имя свойства, значение свойства и добавлять экземпляру новое свойство с указанным именем и значением</p>
+        <div class="code">
+            <pre>
+function Fruits(name) {}
+
+var apple = new Fruits()
+                    
+Fruits.prototype
+                    
+Fruits.prototype.addNewProperty = function(propName, propValue) {
+    this[propName] = propValue
+}
+                    
+apple.addNewProperty('antonovka', 12)
+            </pre>
+        </div>  
+    </div>
+</body>
+
+</html>
